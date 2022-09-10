@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <ul>
+            <li><input type="text" name="input1" id="input1"></li>
+            <li><input type="text" name="input2" id="input2"></li>
+            <li><input type="text" name="input2" id="input3"></li>
+            <hr>
+            <li><button type="submit" id="submit">Submit</button></li>
+        </ul>
+    </form>
+
+
+<script type="text/javascript">
+    
+    var submit = document.getElementById('submit');
+    submit.onclick = function(){
+        var input = [
+            document.getElementById('input1'),
+            document.getElementById('input2'),
+            document.getElementById('input3'),
+
+        ];
+        var total = 0;
+
+        for(i = 0; i < input.length; i++){
+            total += parseInt(input[i]);
+        }
+     
+        alert( "hasil : " + total);
+    }
+
+
+</script>
+</body>
+</html>
